@@ -122,7 +122,7 @@ def configure_logging(log_format=LOG_FORMAT):
         global LOGGING_LEVEL
         logging.root.handlers = []
         logging.basicConfig(
-            format=log_format, stream=sys.stdout, level=logging_level)
+            format=log_format, stream=sys.stderr, level=logging_level)
         LOGGING_LEVEL = logging_level
 
     if "logging_level" in conf.as_dict()["core"]:
